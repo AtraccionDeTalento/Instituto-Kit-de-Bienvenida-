@@ -78,7 +78,7 @@
     'Para afiliar a tu familia a **EsSalud** lleva:\n• Tu DNI y el de tu familiar\n• Acta de matrimonio o convivencia (si aplica)\n• DNI de hijos menores\nDudas: bienestarsocial@usil.edu.pe',
     { modal: 'benefitsModal', f: ['bienestar', 'ley'] });
   E('ley', 'CTS y gratificación', 'fa-scale-balanced', ['cts', 'gratificacion', 'grati', 'asignacion familiar', 'afp', 'onp', 'descuentos de ley', 'compensacion por tiempo'],
-    '⚖️ Por ley tienes **asignación familiar, CTS, gratificación y EsSalud**.\nTe descuentan AFP u ONP y renta de 5ta.\nDudas de CTS: acanchario@usil.edu.pe',
+    '⚖️ Por ley tienes **asignación familiar, CTS, gratificación y EsSalud**.\nTe descuentan AFP u ONP y renta de 5ta.\nCuenta de CTS: Renzo Casafranca, rcasafranca@usil.edu.pe',
     { modal: 'benefitsModal', f: ['haberes', 'remu'] });
   E('adryan', 'Adryan', 'fa-id-card', ['adryan', 'autogestion', 'mis permisos', 'datos personales'],
     '**Adryan** es tu plataforma de colaborador: boletas, permisos, descansos y tus datos.\nEntra con tu correo @usil.edu.pe o @usil.pe.',
@@ -122,16 +122,19 @@
   E('fotocheck', 'Fotocheck', 'fa-id-badge', ['fotocheck', 'carne', 'credencial', 'perdi mi'],
     '🪪 Para perder o imprimir tu fotocheck escribe a **fotocheck@usil.edu.pe**',
     { modal: 'contactsModal', f: ['contactos', 'constancia'] });
-  E('haberes', 'Cuenta de haberes', 'fa-building-columns', ['cuenta de haberes', 'haberes', 'cuenta bancaria', 'cuenta sueldo', 'banco', 'cambio de cuenta', 'cuenta cts'],
-    '🏦 Cuenta de haberes o CTS: **Andrea Canchari**, acanchario@usil.edu.pe',
+  E('haberes', 'Cuenta de haberes', 'fa-building-columns', ['cuenta de haberes', 'haberes', 'cuenta bancaria', 'cuenta sueldo', 'banco', 'cambio de cuenta', 'cuenta cts', 'casafranca'],
+    '🏦 Apertura o cambio de cuenta de haberes y CTS: **Renzo Casafranca**, rcasafranca@usil.edu.pe',
     { modal: 'contactsModal', f: ['pago_fecha', 'ley'] });
+  E('asistencias', 'Reportes de asistencias', 'fa-clipboard-user', ['asistencia', 'asistencias', 'reporte de asistencia', 'reportes de asistencias', 'marcacion', 'marcaciones', 'tardanza', 'andrea', 'canchari'],
+    '🗓️ Reportes de asistencias: **Andrea Canchari**, acanchario@usil.edu.pe',
+    { modal: 'contactsModal', f: ['contactos', 'constancia'] });
   E('ti', 'Soporte TI', 'fa-headset', ['soporte ti', 'soporte', 'tecnico', 'informatica', 'correo institucional', 'mi correo', 'outlook', 'no funciona', 'no jala', 'se colgo', 'se cayo', 'no carga', 'no abre', 'esta lento', 'problema tecnico', 'computadora', 'equipo'],
     '💻 ¿Problemas con tu correo, accesos o equipo? Entra al portal de **Soporte TI** con tu usuario USIL (lo ves en *Contactos*).',
     { modal: 'contactsModal', f: ['clave', 'contactos'] });
   E('constancia', 'Constancia de trabajo', 'fa-file-signature', ['constancia', 'constancia de trabajo', 'certificado de trabajo', 'renzo', 'vega', 'administracion de personal'],
     '📄 Constancias de trabajo y accesos a Adryan: **Renzo Vega**, rvegaa@usil.edu.pe',
     { modal: 'contactsModal', f: ['clave', 'contactos'] });
-  E('bienestar', 'Bienestar Social', 'fa-heart', ['bienestar', 'asistencia social', 'prestamo', 'trabajadora social', 'erica', 'cecilia', 'yizze'],
+  E('bienestar', 'Bienestar Social', 'fa-heart', ['bienestar', 'asistencia social', 'prestamo', 'trabajadora social', 'erica', 'cecilia', 'hilary', 'janampa'],
     '💙 **Bienestar Social** te ayuda con EsSalud, licencias y préstamos:\n• Erica Paredes: 981 393 466\n• Cecilia Portilla: 908 903 616\n• bienestarsocial@usil.edu.pe',
     { modal: 'wellbeingModal', f: ['licencias', 'essalud'] });
   E('datos', 'Actualizar mis datos', 'fa-user-pen', ['actualizar datos', 'cambiar datos', 'cambiar telefono', 'cambiar correo personal', 'domicilio', 'cambie de casa', 'me mude', 'estado civil', 'cambiar nombre', 'familiares', 'hijos', 'diploma', 'estudios', 'experiencia'],
@@ -263,17 +266,17 @@
 @keyframes tlt-ring{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.55);opacity:0}}
 @keyframes tlt-pop{from{opacity:0;transform:translateY(8px) scale(.96)}to{opacity:1;transform:none}}
 @keyframes tlt-dot{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-4px);opacity:1}}
-#tlt-fab{position:fixed;right:var(--r);bottom:var(--bt);z-index:9000;width:var(--fs);height:var(--fs);padding:8px;border:0;border-radius:50%;background:#fff;cursor:pointer;box-shadow:0 8px 24px rgba(0,43,94,.32),0 0 0 3px #fff;transition:transform .2s}
+#tlt-fab{position:fixed;right:var(--r);bottom:var(--bt);z-index:150;width:var(--fs);height:var(--fs);padding:8px;border:0;border-radius:50%;background:#fff;cursor:pointer;box-shadow:0 8px 24px rgba(0,43,94,.32),0 0 0 3px #fff;transition:transform .2s}
 #tlt-fab .tav{animation:tlt-float 3s ease-in-out infinite}
 #tlt-fab:hover{transform:scale(1.1)}#tlt-fab:active{transform:scale(.95)}#tlt-fab:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
 #tlt-fab::before{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid var(--b1);animation:tlt-ring 2.6s ease-out infinite;pointer-events:none}
 #tlt-root.open #tlt-fab::before,#tlt-root.seen #tlt-fab::before{display:none}
 #tlt-badge{position:absolute;top:-2px;right:-2px;min-width:22px;height:22px;border-radius:11px;background:#e5484d;color:#fff;font:700 12px/22px Inter,sans-serif;text-align:center;box-shadow:0 0 0 2px #fff}
 #tlt-root.seen #tlt-badge{display:none}
-#tlt-tip{position:fixed;right:var(--r);bottom:calc(var(--bt) + var(--fs) + 10px);z-index:9000;max-width:240px;padding:12px 30px 12px 14px;background:#fff;color:var(--ink);border-radius:16px 16px 4px 16px;box-shadow:0 8px 24px rgba(0,43,94,.25);font-size:14px;line-height:1.35;cursor:pointer;display:none;animation:tlt-pop .35s}
+#tlt-tip{position:fixed;right:var(--r);bottom:calc(var(--bt) + var(--fs) + 10px);z-index:150;max-width:240px;padding:12px 30px 12px 14px;background:#fff;color:var(--ink);border-radius:16px 16px 4px 16px;box-shadow:0 8px 24px rgba(0,43,94,.25);font-size:14px;line-height:1.35;cursor:pointer;display:none;animation:tlt-pop .35s}
 #tlt-tip.on{display:block}#tlt-root.open #tlt-tip{display:none}
 #tlt-tip button{position:absolute;top:4px;right:6px;border:0;background:none;color:#8a96a8;font-size:16px;cursor:pointer}
-#tlt{position:fixed;right:var(--r);bottom:calc(var(--bt) + var(--fs) + 12px);z-index:9000;width:min(400px,calc(100vw - 24px));height:min(620px,calc(100dvh - var(--bt) - var(--fs) - 48px));display:none;flex-direction:column;background:#f3f7fc;border-radius:22px;box-shadow:0 20px 60px rgba(0,43,94,.4);overflow:hidden;transform-origin:bottom right}
+#tlt{position:fixed;right:var(--r);bottom:calc(var(--bt) + var(--fs) + 12px);z-index:150;width:min(400px,calc(100vw - 24px));height:min(620px,calc(100dvh - var(--bt) - var(--fs) - 48px));display:none;flex-direction:column;background:#f3f7fc;border-radius:22px;box-shadow:0 20px 60px rgba(0,43,94,.4);overflow:hidden;transform-origin:bottom right}
 #tlt-root.open #tlt{display:flex;animation:tlt-pop .28s cubic-bezier(.2,.9,.3,1.2)}
 #tlt header{display:flex;align-items:center;gap:12px;padding:14px 14px 14px 16px;background:linear-gradient(135deg,var(--b1),var(--b2));color:#fff}
 #tlt .hav{width:46px;height:46px;border-radius:50%;background:#fff;padding:4px;flex:none;box-shadow:0 0 0 3px rgba(255,255,255,.3)}
@@ -305,6 +308,22 @@
 #tlt form button{flex:none;width:44px;height:44px;border:0;border-radius:50%;background:var(--b1);color:#fff;font-size:16px;cursor:pointer;transition:.15s}
 #tlt form button:hover{background:var(--b2);transform:scale(1.06)}
 #tlt small{display:block;text-align:center;color:#8a96a8;font-size:11px;padding:0 0 8px;background:#fff}
+/* celular: el chat ocupa toda la pantalla, con letras y botones cómodos de tocar */
+@media(max-width:479px){
+#tlt-root.open #tlt-fab,#tlt-root.open #tlt-tip{display:none}
+#tlt-root #tlt{inset:0;width:100%;height:100vh;height:100dvh;border-radius:0;transform-origin:bottom}
+#tlt header{padding:calc(12px + env(safe-area-inset-top,0px)) 12px 12px 14px}
+#tlt .hnm span{white-space:nowrap}
+#tlt .hlogo{height:26px}
+#tlt-x{width:42px;height:42px;font-size:18px}
+#tlt-log{padding:14px 12px;gap:12px}
+.tlt-bub{font-size:15px;max-width:88%}
+.tlt-chips{padding-left:0;gap:8px}
+.tlt-chips button,.tlt-chips a{font-size:14px;padding:10px 14px;min-height:42px}
+#tlt input{padding:13px 16px}
+#tlt form button{width:48px;height:48px}
+#tlt small{font-size:11.5px;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}
+}
 @media(prefers-reduced-motion:reduce){#tlt-root *{animation:none!important;transition:none!important}}`;
 
   const style = document.createElement('style'); style.textContent = CSS; document.head.appendChild(style);
@@ -386,6 +405,7 @@
 
   function setOpen(v) {
     root.classList.toggle('open', v);
+    if (matchMedia('(max-width:479px)').matches) document.body.style.overflow = v ? 'hidden' : '';
     if (v) {
       root.classList.add('seen'); try { sessionStorage.tltSeen = 1; } catch (e) { }
       if (!log.children.length) { mood('happy', 2500); row(rich(`¡${saludo()}! Soy **Talentin** 👋, tu asistente del Kit del Instituto. Te respondo al instante sobre pagos, licencias, accesos, beneficios y más. ¿Qué necesitas?` + (estadoSede().abierto ? '' : '\n\nℹ️ La sede está fuera de horario ahora, pero yo te atiendo 24/7.')), 'b'); menuChips(); }
