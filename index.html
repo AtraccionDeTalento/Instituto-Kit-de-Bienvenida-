@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tool Kit de Bienvenida | Instituto de Emprendedores USIL</title>
+  <meta name="description" content="¡Bienvenido(a) al Instituto de Emprendedores USIL! Aquí encontrarás todo lo que necesitas como docente para tus primeras semanas." />
+  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- Vista de Escritorio - Fondo y elementos flotantes -->
+  <div class="desktop-layout">
+
+    <!-- Nubes animadas (solo escritorio) -->
+    <div class="sky" aria-hidden="true">
+      <span class="cloud" style="--s:1.3; top:8%;  --d:70s; --delay:-10s"></span>
+      <span class="cloud" style="--s:0.8; top:22%; --d:55s; --delay:-40s"></span>
+      <span class="cloud" style="--s:1.1; top:40%; --d:85s; --delay:-25s"></span>
+      <span class="cloud" style="--s:0.9; top:58%; --d:65s; --delay:-5s"></span>
+      <span class="cloud" style="--s:1.4; top:74%; --d:95s; --delay:-60s"></span>
+      <span class="cloud" style="--s:0.7; top:88%; --d:50s; --delay:-30s"></span>
+    </div>
+
+    <!-- Código QR (Solo visible en escritorio): se genera con la URL de esta página -->
+    <div class="desktop-qr">
+      <span class="qr-text">Escanea en tu móvil</span>
+      <img id="desktopQr" alt="QR Kit Instituto" class="desktop-qr-img" />
+    </div>
+
+    <!-- Contenedor central simulando pantalla móvil -->
+    <div class="phone-container">
+
+      <!-- Botón compartir (top right dentro del celular) -->
+      <button class="share-btn-top" id="shareBtn" title="Compartir">
+        <i class="fas fa-arrow-up-from-bracket"></i>
+      </button>
+
+      <div class="page-wrapper">
+        <main class="container">
+
+          <!-- PERFIL / HEADER -->
+          <section class="profile">
+            <div class="usil-logo-wrap">
+              <img src="assets/ie_logo.webp" alt="Instituto de Emprendedores USIL" class="header-logo ie-logo" />
+            </div>
+
+            <h1 class="welcome-title">¡Bienvenido(a) al equipo docente del Instituto de Emprendedores!</h1>
+            <p class="welcome-subtitle">
+              Aquí encontrarás todo lo que necesitas saber, aunque dictes a distancia.
+            </p>
+          </section>
+
+          <!-- LINKS / ACCIONES -->
+          <section class="links-section">
+
+            <div class="link-card" data-modal="partnerModal" id="btn-partner">
+              <div class="link-icon-circle partner-icon">
+                <img src="assets/partner_icon.png" alt="Socio de Negocio" class="link-icon-img" />
+              </div>
+              <span class="link-title">Conoce a tu Socio de Negocio de Talento y Cultura</span>
+              <button class="link-menu-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <div class="link-card" data-modal="paymentsModal" id="btn-payments">
+              <div class="link-icon-circle fa-icon-circle">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <span class="link-title">Tus Pagos y Boletas</span>
+              <button class="link-menu-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <div class="link-card" data-modal="wellbeingModal" id="btn-wellbeing">
+              <div class="link-icon-circle fa-icon-circle">
+                <i class="fas fa-heart-pulse"></i>
+              </div>
+              <span class="link-title">Bienestar y Licencias</span>
+              <button class="link-menu-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <div class="link-card" data-modal="benefitsModal" id="btn-benefits">
+              <div class="link-icon-circle fa-icon-circle">
+                <i class="fas fa-shield-heart"></i>
+              </div>
+              <span class="link-title">Tus Beneficios y Seguros</span>
+              <button class="link-menu-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <div class="link-card" data-modal="adryanModal" id="btn-adryan">
+              <div class="link-icon-circle fa-icon-circle">
+                <i class="fas fa-key"></i>
+              </div>
+              <span class="link-title">Tu Adryan paso a paso</span>
+              <button class="link-menu-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <div class="link-card" data-modal="platformsModal" id="btn-platforms">
+              <div class="link-icon-circle platforms-icon">
+                <img src="assets/platforms_icon.png" alt="Plataformas Virtuales" class="link-icon-img" />
+              </div>
+              <span class="link-title">Plataformas Virtuales</span>
+              <button class="link-menu-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <div class="link-card" data-modal="campusModal" id="btn-campus">
+              <div class="link-icon-circle campus-icon">
+                <img src="assets/campus_icon.png" alt="Nuestro Instituto" class="link-icon-img" />
+              </div>
+              <span class="link-title">Conoce tu Sede Lima Norte</span>
+              <button class="link-menu-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <div class="link-card" data-modal="contactsModal" id="btn-contacts">
+              <div class="link-icon-circle contacts-icon">
+                <img src="assets/contacts_icon.png" alt="Principales Contactos" class="link-icon-img" />
+              </div>
+              <span class="link-title">Principales Contactos</span>
+              <button class="link-menu-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <p class="section-label">Conoce nuestra línea de emergencia:</p>
+
+            <div class="link-card emergency-card" data-modal="sosModal" id="btn-sos">
+              <div class="link-icon-circle sos-icon">
+                <img src="assets/sos_icon.png" alt="USIL SOS" class="link-icon-img" />
+              </div>
+              <span class="link-title">USIL SOS</span>
+              <button class="link-menu-btn"><i class="fas fa-ellipsis-vertical"></i></button>
+            </div>
+
+          </section>
+
+          <div style="height: 180px;"></div>
+
+        </main>
+      </div>
+
+      <!-- SECCIÓN INFERIOR FIJA CON REDES Y HASH -->
+      <div class="bottom-fade-container">
+        <div class="bottom-actions">
+          <p class="hashtag">#DejandoHuella</p>
+          <div class="linkedin-footer-wrap">
+            <span class="linkedin-text">Síguenos en LinkedIn:</span>
+            <a href="https://www.linkedin.com/company/corporaci%C3%B3n-educativa-usil/posts/?feedView=all" target="_blank" class="linkedin-btn" title="LinkedIn Corporación Educativa USIL">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /phone-container -->
+  </div> <!-- /desktop-layout -->
+
+
+  <!-- =====================
+       MODALES DETALLADOS
+       ===================== -->
+
+  <!-- 1. MODAL: Socio de Negocio (solo el del Instituto) -->
+  <div class="modal-overlay" id="partnerModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fas fa-users-rectangle"></i> Tu Socio de Negocio</h2>
+        <button class="modal-close-icon-btn" onclick="closeModal('partnerModal')"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          En la <strong>Gerencia de Talento y Cultura</strong>, tu Socio de Negocio te brindará apoyo y asesoría. Si no sabes a quién escribir, empieza por aquí:
+        </p>
+        <div class="partner-card solo">
+          <div class="partner-band"></div>
+          <img src="assets/partner_reyes.jpg" alt="Lesley Reyes" class="partner-img" />
+          <span class="partner-badge">Socia de Negocio · Instituto</span>
+          <h3 class="partner-name">Lesley Reyes</h3>
+          <p class="partner-sub">Talento y Cultura</p>
+          <div class="partner-office"><i class="fas fa-location-dot"></i><span><strong>Oficina de Talento y Cultura</strong><br>1.er piso, al costado del comedor</span></div>
+          <div class="partner-office"><i class="fas fa-phone"></i><span><strong>Anexo 4326</strong></span></div>
+          <a href="mailto:lreyes@usil.edu.pe" class="sede-btn sede-btn-primary partner-cta"><i class="fas fa-envelope"></i> lreyes@usil.edu.pe</a>
+          <p class="partner-help">Te ayuda con tu ingreso, contratos, trámites y cualquier duda sobre tu día a día en el Instituto.</p>
+        </div>
+      </div>
+</div>
+      <div class="modal-footer">
+        <button class="modal-action-close-btn" onclick="closeModal('partnerModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MODAL: Pagos y Boletas -->
+  <div class="modal-overlay" id="paymentsModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fas fa-wallet"></i> Tus Pagos y Boletas</h2>
+        <button class="modal-close-icon-btn" onclick="closeModal('paymentsModal')"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="pay-hero" id="payHero"></div>
+
+        <h3 class="pay-section-title">Cronograma de pagos 2026</h3>
+        <div class="pay-table" id="payTable"></div>
+
+        <h3 class="pay-section-title">Tu boleta</h3>
+        <div class="pay-boleta">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <p>En Adryan toca <strong>Mis Boletas</strong>, filtra el año, elige el mes y descárgala. <a href="#" onclick="closeModal('paymentsModal');openModal('adryanModal');return false;" style="color:#0ea5e9;">Ver pasos</a></p>
+          <a href="https://adryancloudusil.sapia.com.pe/" target="_blank" class="platform-btn">Ir a Adryan <i class="fas fa-up-right-from-square"></i></a>
+        </div>
+
+        <h3 class="pay-section-title">Preguntas frecuentes</h3>
+        <details class="pay-faq">
+          <summary>No puedo entrar a Adryan</summary>
+          <p>Reinicia tu clave tú mismo: en Adryan escribe tu DNI o carnet de extranjería y te llega una clave provisional al correo. Pasos en <a href="#" onclick="closeModal('paymentsModal');openModal('adryanModal');return false;">Tu Adryan paso a paso</a>. Si no funciona, escribe a <strong>Renzo Vega</strong>: <a href="mailto:rvegaa@usil.edu.pe">rvegaa@usil.edu.pe</a>.</p>
+        </details>
+        <details class="pay-faq">
+          <summary>Mi pago no llegó o está incompleto</summary>
+          <p>Escribe al <strong>equipo de Remuneraciones</strong>: <a href="mailto:remuneraciones@usil.edu.pe">remuneraciones@usil.edu.pe</a>. Indica tu nombre, DNI y el mes.</p>
+        </details>
+        <details class="pay-faq">
+          <summary>Necesito un certificado de pagos o de depósitos</summary>
+          <p>Escribe a <strong>Frank Candelario</strong>: <a href="mailto:fcandelario@usil.edu.pe">fcandelario@usil.edu.pe</a></p>
+        </details>
+        <details class="pay-faq">
+          <summary>Quiero cambiar mi cuenta de haberes</summary>
+          <p>Escribe a <strong>Andrea Canchari</strong>: <a href="mailto:acanchario@usil.edu.pe">acanchario@usil.edu.pe</a></p>
+        </details>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action-close-btn" onclick="closeModal('paymentsModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. MODAL: Bienestar y Licencias -->
+  <div class="modal-overlay" id="wellbeingModal">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fas fa-heart-pulse"></i> Bienestar y Licencias</h2>
+        <button class="modal-close-icon-btn" onclick="closeModal('wellbeingModal')"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Aunque dictes a distancia, tienes los mismos derechos. Toca cada licencia para ver cuántos días te corresponden.
+        </p>
+
+        <div class="adryan-hero" style="margin-bottom:12px;">
+          <i class="fas fa-laptop"></i>
+          <p>Tus licencias se registran en <strong>Adryan</strong>: Mis permisos / Licencias / Descanso Médico. El equipo de Bienestar aprueba tu solicitud.</p>
+          <a href="#" class="platform-btn" onclick="closeModal('wellbeingModal');openModal('adryanModal');return false;">Ver pasos</a>
+        </div>
+        <details class="lic" open>
+          <summary>
+            <span class="lic-icon" style="--c:#db2777"><i class="fas fa-person-breastfeeding"></i></span>
+            <span class="lic-head"><strong>Maternidad</strong><em>Pre y post natal</em></span>
+          </summary>
+          <div class="lic-body">
+            <ul>
+              <li><strong>Parto único:</strong> 98 días.</li>
+              <li><strong>Parto múltiple:</strong> 128 días.</li>
+            </ul>
+            <p>Regístrala en Adryan y adjunta tu certificado médico. Consultas: Bienestar Social.</p>
+          </div>
+        </details>
+        <details class="lic">
+          <summary>
+            <span class="lic-icon" style="--c:#0b4f9c"><i class="fas fa-baby-carriage"></i></span>
+            <span class="lic-head"><strong>Paternidad</strong><em>10 días calendario</em></span>
+          </summary>
+          <div class="lic-body">
+            <ul>
+              <li><strong>Parto regular:</strong> 10 días calendario.</li>
+              <li><strong>Si el bebé es prematuro:</strong> 20 días.</li>
+            </ul>
+            <p>Regístrala en Adryan con el sustento correspondiente.</p>
+          </div>
+        </details>
+        <details class="lic">
+          <summary>
+            <span class="lic-icon" style="--c:#475569"><i class="fas fa-dove"></i></span>
+            <span class="lic-head"><strong>Fallecimiento de familiar directo</strong><em>5 días en Lima · 7 en provincia</em></span>
+          </summary>
+          <div class="lic-body">
+            <p>Aplica a padres, cónyuge, concubino(a) e hijos.</p>
+            <ul>
+              <li><strong>Lima:</strong> 5 días.</li>
+              <li><strong>Provincia:</strong> 7 días.</li>
+            </ul>
+            <p>Regístrala en Adryan con el sustento correspondiente.</p>
+          </div>
+        </details>
+
+        <h3 class="pay-section-title">Equipo de Bienestar Social</h3>
+        <div class="person-list">
+          <div class="person-card"><span class="person-avatar">EP</span><div class="person-card-info"><strong>Erica Paredes</strong><span>Trabajadora Social</span><small>981 393 466</small></div><div class="person-card-actions"><a href="tel:981393466" title="Llamar"><i class="fas fa-phone"></i></a><a href="mailto:eparedesv@usil.edu.pe" title="eparedesv@usil.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+          <div class="person-card"><span class="person-avatar">CP</span><div class="person-card-info"><strong>Cecilia Portilla</strong><span>Auxiliar de Bienestar Social</span><small>908 903 616</small></div><div class="person-card-actions"><a href="tel:908903616" title="Llamar"><i class="fas fa-phone"></i></a><a href="mailto:cportilla@usil.edu.pe" title="cportilla@usil.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+          <div class="person-card"><span class="person-avatar">YM</span><div class="person-card-info"><strong>Yizze Mayorca</strong><span>Bienestar Social</span></div><div class="person-card-actions"><a href="mailto:ymayorca@usil.edu.pe" title="ymayorca@usil.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+        </div>
+        <p class="pay-note"><i class="fas fa-envelope"></i> O escribe al equipo: <a href="mailto:bienestarsocial@usil.edu.pe" style="color:#0ea5e9;">bienestarsocial@usil.edu.pe</a></p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action-close-btn" onclick="closeModal('wellbeingModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Beneficios y Seguros -->
+  <div class="modal-overlay" id="benefitsModal">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fas fa-shield-heart"></i> Tus Beneficios y Seguros</h2>
+        <button class="modal-close-icon-btn" onclick="closeModal('benefitsModal')"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Toca cada beneficio para ver qué cubre y qué documentos necesitas.</p>
+        <details class="lic" open>
+          <summary>
+            <span class="lic-icon" style="--c:#334155"><i class="fas fa-ribbon"></i></span>
+            <span class="lic-head"><strong>Seguro Vida Ley</strong><em>Desde tu primer día de contrato</em></span>
+          </summary>
+          <div class="lic-body">
+            <p>Apoyo económico temporal a los familiares de un colaborador en caso de fallecimiento por muerte natural, accidental o invalidez permanente.</p>
+            <div class="coupon-grid" style="margin-top:8px;">
+              <div><i class="fas fa-ribbon"></i><strong>Muerte natural</strong><span>16 remuneraciones</span></div>
+              <div><i class="fas fa-person-falling"></i><strong>Muerte accidental</strong><span>32 remuneraciones</span></div>
+              <div style="grid-column:1/-1"><i class="fas fa-wheelchair"></i><strong>Invalidez total y permanente</strong><span>32 remuneraciones</span></div>
+            </div>
+            <p class="lic-alert"><i class="fas fa-triangle-exclamation"></i> <strong>Importante:</strong> llena la <strong>Declaración Jurada de Beneficiarios</strong> y legalízala de forma notarial.</p>
+            <p style="margin-top:8px;">Consultas: Administración de Personal, Lidia Gonzales, <a href="mailto:lgonzalesar@usil.edu.pe" style="color:#0ea5e9;">lgonzalesar@usil.edu.pe</a></p>
+          </div>
+        </details>
+        <details class="lic">
+          <summary>
+            <span class="lic-icon" style="--c:#db2777"><i class="fas fa-baby"></i></span>
+            <span class="lic-head"><strong>Madres gestantes y lactantes</strong><em>Hora de lactancia y lactario</em></span>
+          </summary>
+          <div class="lic-body">
+            <ul>
+              <li><strong>Hora de lactancia:</strong> la madre tiene derecho a una hora de permiso para amamantar a su hijo hasta que cumpla un año. En partos múltiples se concede una hora adicional.</li>
+              <li><strong>Lactario:</strong> sala acondicionada para extraer y conservar tu leche de forma segura y privada. Está dirigida a colaboradoras con hijos menores de 2 años.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="lic">
+          <summary>
+            <span class="lic-icon" style="--c:#0b4f9c"><i class="fas fa-hospital"></i></span>
+            <span class="lic-head"><strong>EsSalud</strong><em>Afiliación de derechohabientes</em></span>
+          </summary>
+          <div class="lic-body">
+            <p><strong>Para afiliar a tu familia necesitas:</strong></p>
+            <ul>
+              <li>DNI del trabajador y del derechohabiente.</li>
+              <li>Acta de matrimonio o acta notarial de convivencia (si corresponde).</li>
+              <li>DNI de hijos menores.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="lic">
+          <summary>
+            <span class="lic-icon" style="--c:#7c3aed"><i class="fas fa-scale-balanced"></i></span>
+            <span class="lic-head"><strong>Beneficios de ley</strong><em>Lo que te corresponde por ley</em></span>
+          </summary>
+          <div class="lic-body">
+            <p><strong>Beneficios</strong></p>
+            <ul>
+              <li>Asignación familiar.</li>
+              <li>Compensación por Tiempo de Servicios (CTS).</li>
+              <li>Gratificación.</li>
+              <li>EsSalud.</li>
+            </ul>
+            <p style="margin-top:8px;"><strong>Descuentos de ley</strong></p>
+            <ul>
+              <li>AFP u ONP.</li>
+              <li>Impuesto a la renta de quinta categoría.</li>
+            </ul>
+          </div>
+        </details>
+
+        <div class="adryan-help">
+          <i class="fas fa-handshake-angle"></i>
+          <p><strong>¿Dudas sobre tus beneficios o EsSalud?</strong> Escribe a Bienestar Social: <a href="mailto:bienestarsocial@usil.edu.pe">bienestarsocial@usil.edu.pe</a></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action-close-btn" onclick="closeModal('benefitsModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Tu Adryan paso a paso -->
+  <div class="modal-overlay" id="adryanModal">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fas fa-key"></i> Tu Adryan paso a paso</h2>
+        <button class="modal-close-icon-btn" onclick="closeModal('adryanModal')"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="adryan-hero">
+          <i class="fas fa-laptop"></i>
+          <p>Adryan es tu plataforma de colaborador. Ingresa siempre con tu <strong>correo institucional USIL</strong> (@usil.edu.pe o @usil.pe).</p>
+          <a href="https://adryancloudusil.sapia.com.pe" target="_blank" class="platform-btn">Abrir Adryan <i class="fas fa-up-right-from-square"></i></a>
+        </div>
+        <details class="lic" open>
+          <summary>
+            <span class="lic-icon" style="--c:#0b4f9c"><i class="fas fa-door-open"></i></span>
+            <span class="lic-head"><strong>Primer acceso</strong><em>Usuario y clave provisional</em></span>
+          </summary>
+          <div class="lic-body">
+            <p>Te llega un correo a tu <strong>correo personal y al institucional</strong> con tu usuario asignado y una clave provisional.</p>
+            <ol>
+              <li>Ingresa a <strong>adryancloudusil.sapia.com.pe/Account/LoginAd</strong>.</li>
+              <li>Escribe tu usuario asignado y la clave provisional.</li>
+              <li>El sistema te pedirá crear tu clave nueva.</li>
+              <li>Vuelve a entrar con tu usuario y la clave que creaste.</li>
+            </ol>
+            <p class="rules"><strong>Tu clave nueva debe tener:</strong> de 6 a 15 caracteres, al menos una mayúscula, un número y un carácter especial (#, %, @, $…).</p>
+          </div>
+        </details>
+        <details class="lic">
+          <summary>
+            <span class="lic-icon" style="--c:#7c3aed"><i class="fas fa-rotate"></i></span>
+            <span class="lic-head"><strong>Olvidé mi clave</strong><em>Reinicio en 2 minutos</em></span>
+          </summary>
+          <div class="lic-body">
+            <p>No necesitas pedir ayuda: lo resuelves tú.</p>
+            <ol>
+              <li>Ingresa a Adryan.</li>
+              <li>Escribe tu número de <strong>DNI o carnet de extranjería</strong>.</li>
+              <li>Al instante recibes un correo con una clave provisional.</li>
+              <li>Entra con tu usuario y esa clave provisional.</li>
+              <li>Crea tu clave nueva.</li>
+            </ol>
+            <p class="rules"><strong>Tu clave nueva debe tener:</strong> de 6 a 15 caracteres, al menos una mayúscula, un número y un carácter especial (#, %, @, $…).</p>
+          </div>
+        </details>
+        <details class="lic">
+          <summary>
+            <span class="lic-icon" style="--c:#0d9488"><i class="fas fa-file-invoice-dollar"></i></span>
+            <span class="lic-head"><strong>Mis boletas de pago</strong><em>Ver y descargar</em></span>
+          </summary>
+          <div class="lic-body">
+            <p>Entra a Adryan con tu correo institucional USIL (<strong>@usil.edu.pe</strong> o <strong>@usil.pe</strong>).</p>
+            <ol>
+              <li>Toca el icono <strong>Mis Boletas</strong>.</li>
+              <li>Filtra por el <strong>año</strong> que quieres ver.</li>
+              <li>Elige el <strong>mes</strong>: se abre tu boleta.</li>
+              <li>Usa la barra de descarga: se guarda en la carpeta Descargas de tu equipo.</li>
+            </ol>
+          </div>
+        </details>
+        <details class="lic">
+          <summary>
+            <span class="lic-icon" style="--c:#dc2626"><i class="fas fa-notes-medical"></i></span>
+            <span class="lic-head"><strong>Registrar un descanso médico</strong><em>Mis permisos / Licencias / Descanso Médico</em></span>
+          </summary>
+          <div class="lic-body">
+            <ol>
+              <li>En Adryan entra a <strong>Mis permisos / Licencias / Descanso Médico</strong>.</li>
+              <li>Elige la procedencia: <strong>EsSalud</strong> (coloca el CITT) o <strong>Particular</strong>.</li>
+              <li>Indica fecha de inicio y de término, como prescribió tu médico.</li>
+              <li>Escribe el diagnóstico tal como figura en tu descanso.</li>
+              <li>En <strong>Sustentos</strong> adjunta tus documentos y toca <strong>Agregar archivos</strong>.</li>
+              <li>Toca <strong>Solicitar</strong> y confirma con <strong>Sí</strong>. Verás "Registrado correctamente".</li>
+            </ol>
+            <p class="lic-alert"><i class="fas fa-clock"></i> Entrega tu descanso en <strong>máximo 48 horas</strong> desde que se emite. Antes de subirlo verifica: datos correctos, diagnóstico, fecha de inicio y fin, y firma y sello del médico.</p>
+            <p style="margin-top:8px;"><strong>¿Qué adjuntar?</strong></p>
+            <ul>
+              <li><strong>EsSalud:</strong> solo el CITT.</li>
+              <li><strong>Particular:</strong> el descanso médico original (indispensable, sin borrones ni enmendaduras, con diagnóstico, fechas, sello y firma del médico), la receta médica y el comprobante de pago de la consulta o de los medicamentos.</li>
+            </ul>
+            <p>En esta misma ventana registras también tus licencias: maternidad, paternidad y fallecimiento de familiar directo.</p>
+            <p class="lic-alert"><i class="fas fa-clock"></i> <strong>Bienestar Social</strong> valida tu registro. Si falta algún documento te avisan y tienes <strong>24 a 48 horas</strong> para corregirlo.</p>
+          </div>
+        </details>
+        <details class="lic">
+          <summary>
+            <span class="lic-icon" style="--c:#ea580c"><i class="fas fa-user-pen"></i></span>
+            <span class="lic-head"><strong>Actualizar mis datos</strong><em>Módulo "Actualiza tus datos"</em></span>
+          </summary>
+          <div class="lic-body">
+            <ul>
+              <li><strong>Teléfono y correo personal:</strong> los cambias cuando quieras.</li>
+              <li><strong>Nombres, apellidos, DNI o CE, fecha de nacimiento, estado civil o nacionalidad:</strong> debes adjuntar el documento que lo sustente.</li>
+              <li><strong>Domicilio:</strong> pestaña Domicilio; luego vuelve a Colaborador y guarda.</li>
+              <li><strong>Familiares</strong> (hijos, cónyuge o concubino, hijastros, padres, hermanos): DNI por ambas caras. Cónyuge: acta de matrimonio de Reniec. Concubino: reconocimiento de unión de hecho (resolución judicial o escritura pública).</li>
+              <li><strong>Estudios y certificaciones:</strong> adjunta tu diploma o certificado.</li>
+              <li><strong>Experiencia:</strong> adjunta tu certificado de trabajo.</li>
+            </ul>
+            <p class="lic-alert"><i class="fas fa-triangle-exclamation"></i> <strong>Todos los documentos van en PDF.</strong> Si no adjuntas el sustento, la solicitud se rechaza. Talento y Cultura aprueba los cambios.</p>
+            <p class="lic-alert"><i class="fas fa-circle-exclamation"></i> Es <strong>indispensable</strong> registrar tu <strong>contacto de emergencia</strong> y confirmar si tienes un familiar que trabaje en la Corporación.</p>
+          </div>
+        </details>
+
+        <div class="adryan-help">
+          <i class="fas fa-headset"></i>
+          <p><strong>¿Sigues con dudas de acceso?</strong> Escribe a <a href="mailto:gestion.humana@usil.edu.pe">gestion.humana@usil.edu.pe</a> o a Renzo Vega: <a href="mailto:rvegaa@usil.edu.pe">rvegaa@usil.edu.pe</a></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action-close-btn" onclick="closeModal('adryanModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. MODAL: Plataformas Virtuales -->
+  <div class="modal-overlay" id="platformsModal">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fas fa-laptop-code"></i> Plataformas Virtuales</h2>
+        <button class="modal-close-icon-btn" onclick="closeModal('platformsModal')"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Como docente del Instituto, tendrás acceso a estas plataformas desde cualquier lugar:
+        </p>
+
+        <div class="platform-item">
+          <div class="platform-logo-wrap">
+            <img src="assets/platform_adryan.png" alt="Adryan" class="platform-logo" />
+          </div>
+          <div class="platform-content">
+            <h3 class="platform-name">
+              Adryan
+              <a href="https://adryancloudusil.sapia.com.pe/" target="_blank" class="platform-btn">Acceder <i class="fas fa-up-right-from-square"></i></a>
+            </h3>
+            <p class="platform-desc">Tu autogestión en línea:</p>
+            <ul class="platform-features">
+              <li><i class="fas fa-user-pen"></i> Actualizar tu información personal.</li>
+              <li><i class="fas fa-file-invoice-dollar"></i> Ver y descargar tus boletas de pago.</li>
+              <li><i class="fas fa-file-waveform"></i> Subir tus descansos médicos.</li>
+              <li><i class="fas fa-phone-volume"></i> Registrar tu contacto de emergencia.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="platform-item">
+          <div class="platform-logo-wrap">
+            <img src="assets/platform_engage.png" alt="Viva Engage" class="platform-logo" />
+          </div>
+          <div class="platform-content">
+            <h3 class="platform-name">
+              Viva Engage
+              <a href="https://engage.cloud.microsoft/main/feed" target="_blank" class="platform-btn">Acceder <i class="fas fa-up-right-from-square"></i></a>
+            </h3>
+            <p class="platform-desc">Nuestra red social interna. Aunque no vengas al Instituto, aquí te enteras de comunicados, eventos, convenios y beneficios.</p>
+          </div>
+        </div>
+
+        <div class="platform-item">
+          <div class="platform-logo-wrap">
+            <img src="assets/platform_academia.png" alt="Academia USIL" class="platform-logo" />
+          </div>
+          <div class="platform-content">
+            <h3 class="platform-name">
+              Academia USIL
+              <a href="https://academia.usil.pe/login/index.php" target="_blank" class="platform-btn">Acceder <i class="fas fa-up-right-from-square"></i></a>
+            </h3>
+            <p class="platform-desc">
+              Aquí llevarás tu <strong>inducción docente</strong> y las capacitaciones del Instituto, a tu ritmo.
+              <br><strong>Acceso:</strong> Usa tu DNI como usuario y contraseña (si es tu primer acceso).
+              <br><span style="color:#b91c1c; font-weight: 600;"><i class="fas fa-triangle-exclamation"></i> ¡Importante!</span> El plazo máximo para completar tu inducción es de <strong>10 días calendario</strong> desde tu fecha de ingreso.
+            </p>
+          </div>
+        </div>
+
+        <div class="platform-contacts">
+          <div class="contact-box">
+            <h4><i class="fas fa-graduation-cap"></i> ¿Dudas sobre Academia USIL?</h4>
+            <p>Escribe a José Porta: <a href="mailto:jporta@usil.edu.pe">jporta@usil.edu.pe</a></p>
+          </div>
+          <div class="contact-box">
+            <h4><i class="fas fa-award"></i> ¿Consultas sobre becas y beneficios educativos?</h4>
+            <p>Escribe a Becas: <a href="mailto:becas.educacion@usil.edu.pe">becas.educacion@usil.edu.pe</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action-close-btn" onclick="closeModal('platformsModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. MODAL: Ubica tu Instituto -->
+  <div class="modal-overlay" id="campusModal">
+    <div class="modal-box modal-lg">
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fas fa-map-location-dot"></i> Conoce tu Sede</h2>
+        <button class="modal-close-icon-btn" onclick="closeModal('campusModal')"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" style="padding-top:0;">
+
+        <div class="sede-hero">
+          <img src="assets/ie_fachada.webp" alt="Fachada del Instituto de Emprendedores USIL, sede Lima Norte" />
+          <div class="sede-hero-text">
+            <span>Instituto de Emprendedores USIL</span>
+            <strong>Sede Lima Norte</strong>
+          </div>
+        </div>
+
+        <div class="sede-address">
+          <i class="fas fa-location-dot"></i>
+          <div>
+            <strong>Av. Industrial 3484, Independencia</strong>
+            <p>A espaldas del C.C. MegaPlaza, entre la Av. El Pacífico y la Av. Industrial.</p>
+          </div>
+        </div>
+
+        <div class="sede-actions">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Instituto+de+Emprendedores+USIL+Lima+Norte" target="_blank" class="sede-btn sede-btn-primary"><i class="fas fa-route"></i> Cómo llegar</a>
+          <a href="https://waze.com/ul?q=Av.%20Industrial%203484%20Independencia%20Lima&navigate=yes" target="_blank" class="sede-btn"><i class="fab fa-waze"></i> Waze</a>
+        </div>
+
+        <div class="sede-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.6968190269795!2d-77.06111352400654!3d-11.99546804094972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce5511e2b545%3A0xcb296e408101010e!2sInstituto%20de%20Emprendedores%20-%20Lima%20Norte!5e0!3m2!1ses-419!2spe!4v1750781468011!5m2!1ses-419!2spe" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de la sede Lima Norte"></iframe>
+        </div>
+
+        <h3 class="pay-section-title">Conoce la sede</h3>
+        <div class="sede-gallery">
+          <figure><img src="assets/ie_edificio.webp" alt="Patio interior del Instituto" loading="lazy" /><figcaption>Espacios comunes</figcaption></figure>
+          <figure><img src="assets/ie_aulas.webp" alt="Aulas HyFlex" loading="lazy" /><figcaption>Aulas HyFlex</figcaption></figure>
+          <figure><img src="assets/ie_biblioteca.webp" alt="Biblioteca 24x7" loading="lazy" /><figcaption>Biblioteca 24 x 7</figcaption></figure>
+        </div>
+
+        <ul class="sede-features">
+          <li><i class="fas fa-leaf"></i> Edificio con certificación LEED</li>
+          <li><i class="fas fa-wifi"></i> Wifi libre en todo el edificio</li>
+          <li><i class="fas fa-elevator"></i> Ascensores modernos</li>
+          <li><i class="fas fa-people-group"></i> Ambientes de coworking</li>
+        </ul>
+
+        <h3 class="pay-section-title">Recorrido en video</h3>
+        <div class="sede-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/Q4GS7FjaT1s?rel=0" title="Recorrido por la sede Lima Norte" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <h3 class="pay-section-title">¿A quién busco en la sede?</h3>
+        <div class="person-list">
+          <div class="person-card"><span class="person-avatar">MI</span><div class="person-card-info"><strong>María Isabel Vargas</strong><span>Jefa Académica · 2.° piso</span></div><div class="person-card-actions"><a href="mailto:mvargasm@institutoemprendedores.edu.pe" title="mvargasm@institutoemprendedores.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+          <div class="person-card"><span class="person-avatar">EL</span><div class="person-card-info"><strong>Edwin López</strong><span>Coordinador de Operaciones Académicas</span></div><div class="person-card-actions"><a href="mailto:elopezg@institutoemprendedores.edu.pe" title="elopezg@institutoemprendedores.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+          <div class="person-card"><span class="person-avatar">GL</span><div class="person-card-info"><strong>Gloria Lázaro</strong><span>Coordinadora de Operaciones Académicas</span></div><div class="person-card-actions"><a href="mailto:glazaro@institutoemprendedores.edu.pe" title="glazaro@institutoemprendedores.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+          <div class="person-card"><span class="person-avatar">CC</span><div class="person-card-info"><strong>Carlos Chiclla</strong><span>Coordinador de Seguridad Física</span></div><div class="person-card-actions"><a href="mailto:cchiclla@usil.edu.pe" title="cchiclla@usil.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+          <div class="person-card"><span class="person-avatar">LR</span><div class="person-card-info"><strong>Lesley Reyes</strong><span>Socia de Negocio · 1.er piso, al costado del comedor · anexo 4326</span></div><div class="person-card-actions"><a href="mailto:lreyes@usil.edu.pe" title="lreyes@usil.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+        </div>
+
+        <div class="sede-hours">
+          <i class="fas fa-clock"></i>
+          <p><strong>Atención en sede:</strong> lunes a viernes de 9:00 a.m. a 8:00 p.m. · sábados de 9:00 a.m. a 5:00 p.m.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action-close-btn" onclick="closeModal('campusModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. MODAL: Principales Contactos -->
+  <div class="modal-overlay" id="contactsModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title"><i class="fas fa-address-book"></i> Principales Contactos</h2>
+        <button class="modal-close-icon-btn" onclick="closeModal('contactsModal')"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Ante cualquier duda de pagos, trámites, accesos o documentos, ponte en contacto con los responsables:
+        </p>
+
+        <div class="contact-section">
+          <h3><i class="fas fa-building-columns"></i> En tu Instituto</h3>
+          <div class="person-list">
+            <div class="person-card"><span class="person-avatar">LR</span><div class="person-card-info"><strong>Lesley Reyes</strong><span>Socia de Negocio · 1.er piso, al costado del comedor · anexo 4326</span></div><div class="person-card-actions"><a href="mailto:lreyes@usil.edu.pe" title="lreyes@usil.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+            <div class="person-card"><span class="person-avatar">MI</span><div class="person-card-info"><strong>María Isabel Vargas</strong><span>Jefa Académica</span></div><div class="person-card-actions"><a href="mailto:mvargasm@institutoemprendedores.edu.pe" title="mvargasm@institutoemprendedores.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+            <div class="person-card"><span class="person-avatar">EL</span><div class="person-card-info"><strong>Edwin López</strong><span>Coord. de Operaciones Académicas</span></div><div class="person-card-actions"><a href="mailto:elopezg@institutoemprendedores.edu.pe" title="elopezg@institutoemprendedores.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+            <div class="person-card"><span class="person-avatar">GL</span><div class="person-card-info"><strong>Gloria Lázaro</strong><span>Coord. de Operaciones Académicas</span></div><div class="person-card-actions"><a href="mailto:glazaro@institutoemprendedores.edu.pe" title="glazaro@institutoemprendedores.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+            <div class="person-card"><span class="person-avatar">JP</span><div class="person-card-info"><strong>José Porta</strong><span>Aprendizaje y Desarrollo · Academia USIL</span></div><div class="person-card-actions"><a href="mailto:jporta@usil.edu.pe" title="jporta@usil.edu.pe"><i class="fas fa-envelope"></i></a></div></div>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h3><i class="fas fa-hand-holding-dollar"></i> Remuneraciones</h3>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Santiago Osorio</strong>
+              <span class="person-role">Certificado de 5ta Categoría, Consultas de Pagos</span>
+            </div>
+            <a href="mailto:sosorio@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> sosorio@usil.edu.pe</a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Frank Candelario</strong>
+              <span class="person-role">Certificados de Pagos, Consultas de Depósitos</span>
+            </div>
+            <a href="mailto:fcandelario@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> fcandelario@usil.edu.pe</a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Equipo de Remuneraciones</strong>
+              <span class="person-role">Consultas generales de Pagos y Boletas</span>
+            </div>
+            <a href="mailto:remuneraciones@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> remuneraciones@usil.edu.pe</a>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h3><i class="fas fa-id-card-clip"></i> Administración de Personal</h3>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Renzo Vega</strong>
+              <span class="person-role">Accesos a Adryan y Constancias de Trabajo</span>
+            </div>
+            <a href="mailto:rvegaa@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> rvegaa@usil.edu.pe</a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Fotocheck</strong>
+              <span class="person-role">Pérdida o impresión de fotocheck</span>
+            </div>
+            <a href="mailto:fotocheck@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> fotocheck@usil.edu.pe</a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Andrea Canchari</strong>
+              <span class="person-role">Apertura y Cambio de Cuenta de Haberes / CTS</span>
+            </div>
+            <a href="mailto:acanchario@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> acanchario@usil.edu.pe</a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Lidia Gonzales</strong>
+              <span class="person-role">Trámites documentarios de contratación, Seguro Vida Ley y Declaración Jurada de Beneficiarios</span>
+            </div>
+            <a href="mailto:lgonzalesar@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> lgonzalesar@usil.edu.pe</a>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h3><i class="fas fa-scale-balanced"></i> Compensaciones y Presupuesto</h3>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Amador Unzueta</strong>
+              <span class="person-role">Jefe de Compensaciones y Presupuesto</span>
+            </div>
+            <a href="mailto:aunzueta@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> aunzueta@usil.edu.pe</a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Alexandra Carnero</strong>
+              <span class="person-role">Analista de Compensaciones</span>
+            </div>
+            <a href="mailto:acarnero@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> acarnero@usil.edu.pe</a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Rosa Huacho</strong>
+              <span class="person-role">Asistente de Compensaciones</span>
+            </div>
+            <a href="mailto:rhuacho@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> rhuacho@usil.edu.pe</a>
+          </div>
+        </div>
+
+        <div class="contact-section">
+          <h3><i class="fas fa-handshake-angle"></i> Bienestar Social</h3>
+          <p style="font-size:12px; color:#475569; margin-bottom:10px;">Consultas sobre: EsSalud, Licencias (maternidad, paternidad, fallecimiento), Asistencia Social y Préstamos.</p>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Erica Paredes</strong>
+              <span class="person-role">981 393 466 · eparedesv@usil.edu.pe</span>
+            </div>
+            <a href="tel:981393466" class="mail-icon-link"><i class="fas fa-phone"></i></a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Cecilia Portilla</strong>
+              <span class="person-role">908 903 616 · cportilla@usil.edu.pe</span>
+            </div>
+            <a href="tel:908903616" class="mail-icon-link"><i class="fas fa-phone"></i></a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Yizze Mayorca</strong>
+              <span class="person-role">ymayorca@usil.edu.pe</span>
+            </div>
+            <a href="mailto:ymayorca@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i></a>
+          </div>
+          <div class="contact-person">
+            <div class="person-info">
+              <strong>Equipo de Bienestar</strong>
+            </div>
+            <a href="mailto:bienestarsocial@usil.edu.pe" class="mail-icon-link"><i class="fas fa-envelope"></i> bienestarsocial@usil.edu.pe</a>
+          </div>
+        </div>
+        <div class="contact-section">
+          <h3><i class="fas fa-headset"></i> Soporte TI</h3>
+          <p style="font-size:12px; color:#475569; margin-bottom:10px;">Problemas con tu correo, accesos o equipos. Ingresa con tu usuario de correo USIL.</p>
+          <a href="https://grupousil.atlassian.net/servicedesk/customer/user/login?destination=portals" target="_blank" class="sede-btn sede-btn-primary">Abrir portal de Soporte TI <i class="fas fa-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action-close-btn" onclick="closeModal('contactsModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. MODAL: USIL SOS (Línea de emergencia) -->
+  <div class="modal-overlay" id="sosModal">
+    <div class="modal-box">
+      <div class="modal-header" style="background:#fee2e2; border-bottom:1px solid #fecaca;">
+        <h2 class="modal-title" style="color:#dc2626;"><i class="fas fa-triangle-exclamation"></i> Línea de Emergencia SOS</h2>
+        <button class="modal-close-icon-btn" onclick="closeModal('sosModal')" style="color:#dc2626; background:#fca5a5;"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="sos-dashboard">
+          <div class="sos-number-card">
+            <div class="sos-label">COMUNÍCATE AL NÚMERO</div>
+            <a href="tel:905441001" class="sos-number">
+              <i class="fas fa-phone-volume"></i> 905 441 001
+            </a>
+            <p style="font-size:12px; color:#ef4444; font-weight:600; margin-bottom:16px;">Disponible para emergencias en campus y sedes de la corporación.</p>
+            <a href="tel:905441001" class="sos-call-btn">
+              <i class="fas fa-phone"></i> Llamar Ahora
+            </a>
+          </div>
+
+          <div class="sos-info-block">
+            <h4><i class="fas fa-shield-halved"></i> En la sede Lima Norte</h4>
+            <ul>
+              <li><strong>Seguridad física:</strong> Carlos Chiclla<br><a href="mailto:cchiclla@usil.edu.pe">cchiclla@usil.edu.pe</a></li>
+              <li><strong>Cualquier otra consulta:</strong> Lesley Reyes<br><a href="mailto:lreyes@usil.edu.pe">lreyes@usil.edu.pe</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action-close-btn" onclick="closeModal('sosModal')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 8. MODAL: Share -->
+  <div class="modal-overlay" id="shareModal">
+    <div class="modal-box share-modal-box">
+      <div class="share-modal-header">
+        <h2 class="share-modal-title">Compartir portal</h2>
+        <button class="share-close-btn" onclick="closeModal('shareModal')">
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="share-preview-card">
+        <div class="share-avatar-circle">
+          <img src="assets/usil_logo.png" alt="USIL Logo" class="share-avatar-img" />
+        </div>
+        <h3 class="share-card-title">TOOLKIT DE BIENVENIDA</h3>
+        <p class="share-card-subtitle">Instituto de Emprendedores USIL</p>
+      </div>
+
+      <div class="share-options-container">
+        <div class="share-options-scroll">
+          <button class="share-option-btn" id="copyLinkBtn">
+            <div class="share-icon-circle copy-btn-bg"><i class="fas fa-link"></i></div>
+            <span class="share-option-label">Copiar</span>
+          </button>
+          <button class="share-option-btn" onclick="shareWhatsApp()">
+            <div class="share-icon-circle wa-btn-bg"><i class="fab fa-whatsapp"></i></div>
+            <span class="share-option-label">WhatsApp</span>
+          </button>
+          <button class="share-option-btn" onclick="shareEmail()">
+            <div class="share-icon-circle mail-btn-bg"><i class="fas fa-envelope"></i></div>
+            <span class="share-option-label">Correo</span>
+          </button>
+          <button class="share-option-btn" onclick="shareLinkedIn()">
+            <div class="share-icon-circle ln-btn-bg"><i class="fab fa-linkedin-in"></i></div>
+            <span class="share-option-label">LinkedIn</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" style="position:fixed; bottom:40px; left:50%; transform:translateX(-50%); background:#333; color:#fff; padding:10px 24px; border-radius:24px; font-size:14px; display:none; z-index:9999;">
+    ¡Enlace copiado!
+  </div>
+
+  <script src="script.js?v=3"></script>
+  <script>
+    // Cronograma 2026 (cierre, pago) y depósitos especiales
+    const MESES=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Setiembre','Octubre','Noviembre','Diciembre'];
+    const PAGOS=[['2026-01-13','2026-01-23'],['2026-02-12','2026-02-25'],['2026-03-12','2026-03-25'],['2026-04-13','2026-04-24'],['2026-05-12','2026-05-25'],['2026-06-15','2026-06-25'],['2026-07-10','2026-07-24'],['2026-08-12','2026-08-25'],['2026-09-14','2026-09-25'],['2026-10-12','2026-10-23'],['2026-11-13','2026-11-25'],['2026-12-09','2026-12-23']];
+    const d=x=>new Date(x+'T00:00:00'), fmt=x=>d(x).toLocaleDateString('es-PE',{weekday:'long',day:'numeric',month:'short'}).replace('.','');
+    (function(){
+      const hoy=new Date(); hoy.setHours(0,0,0,0);
+      const next=PAGOS.findIndex(p=>d(p[1])>=hoy);
+      $('payTable').innerHTML='<div class="pay-row pay-head"><span>Mes</span><span>Fecha de pago</span></div>'+PAGOS.map((p,i)=>
+        `<div class="pay-row${i===next?' next':''}${next<0||i<next?' past':''}"><span>${MESES[i]}</span><strong>${fmt(p[1])}</strong></div>`).join('');
+      if(next>=0){
+        const dias=Math.round((d(PAGOS[next][1])-hoy)/864e5);
+        $('payHero').innerHTML=`<span class="pay-hero-label">Tu próximo pago</span><span class="pay-hero-value">${d(PAGOS[next][1]).toLocaleDateString('es-PE',{day:'numeric',month:'long'})}</span><span class="pay-hero-sub">${dias===0?'¡Es hoy!':'Faltan '+dias+' días'}</span>`;
+      } else $('payHero').innerHTML='<span class="pay-hero-label">Cronograma 2026 completo</span><span class="pay-hero-sub">El de 2027 se publicará próximamente</span>';
+    })();
+  </script>
+  <script>
+    // QR de escritorio apunta a la URL donde se publique este kit
+    $('desktopQr').src = 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(location.origin + location.pathname);
+  </script>
+  <script src="talentin.js"></script>
+</body>
+
+</html>
