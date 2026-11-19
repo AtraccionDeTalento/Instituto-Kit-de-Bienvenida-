@@ -143,8 +143,8 @@
   E('contacto_emerg', 'Contacto de emergencia', 'fa-phone-volume', ['contacto de emergencia', 'familiar trabaja', 'familiar en la corporacion', 'pariente', 'registrar emergencia'],
     'Es **obligatorio** registrar tu contacto de emergencia en Adryan (*Actualiza tus datos*) y decir si tienes un familiar que trabaje en la Corporación.',
     { modal: 'adryanModal', acts: ADRYAN, f: ['datos', 'sos'] });
-  E('compensaciones', 'Compensaciones', 'fa-coins', ['compensaciones', 'presupuesto', 'amador', 'unzueta', 'alexandra', 'carnero', 'rosa', 'huacho', 'analista'],
-    '💰 **Compensaciones y Presupuesto:**\n• Amador Unzueta: aunzueta@usil.edu.pe\n• Alexandra Carnero: acarnero@usil.edu.pe\n• Rosa Huacho: rhuacho@usil.edu.pe\nConsultas generales: compensaciones@usil.edu.pe',
+  E('compensaciones', 'Compensaciones', 'fa-coins', ['compensaciones', 'presupuesto', 'compensacion'],
+    '💰 Para consultas de **Compensaciones y Presupuesto** escribe a compensaciones@usil.edu.pe',
     { modal: 'contactsModal', f: ['remu', 'contactos'] });
   E('contratacion', 'Trámites de contratación', 'fa-file-contract', ['contratacion', 'documentos de contratacion', 'lidia', 'gonzales', 'firmar contrato', 'mi contrato', 'documentos de ingreso', 'papeleo'],
     '📝 Trámites de contratación, Vida Ley y Declaración Jurada: **Lidia Gonzales**, lgonzalesar@usil.edu.pe',
@@ -443,7 +443,7 @@
   window.talentinTest = () => {
     const top = t => (buscar(t)[0] || [{}])[0].id, sc = t => (buscar(t)[0] || [0, 0])[1];
     const casos = { 'cuando me pagan': 'pago_fecha', '¿Cuándo es mi PAGO?': 'pago_fecha', 'necesito mi boleta de pago': 'boleta', 'bolleta': 'boleta', 'olvide mi contraseña': 'clave',
-      'cuantos dias de maternidad': 'maternidad', 'ayuda urgente': 'sos', 'donde queda la sede': 'campus', 'hasta que hora atienden': 'horario', 'hola': 'hola', 'gracias': 'gracias', 'tengo gripe': 'descanso', 'quiero cambiar mi domicilio': 'datos', 'como comparto el kit': 'compartir', 'quien es amador': 'compensaciones', 'estan atendiendo ahora': 'horario', 'quiero llamar a usil': 'llamar', 'no me jala el correo': 'ti', 'cuando me depositan la plata': 'pago_fecha', 'se me olvido la contra': 'clave', 'a que hora abren': 'horario', 'ya po oe cuando cae mi sueldo': 'pago_fecha', 'holaaa': 'hola', 'mil gracias': 'gracias', 'a quien le pregunto': 'partner', 'me robaron': 'sos', 'estoy mal de la garganta': 'descanso', 'que adjunto en el descanso': 'descanso_docs', 'mi primer ingreso': 'primer_acceso', 'con quien hablo': 'contactos', 'me mude de casa': 'datos', 'registrar contacto de emergencia': 'contacto_emerg' };
+      'cuantos dias de maternidad': 'maternidad', 'ayuda urgente': 'sos', 'donde queda la sede': 'campus', 'hasta que hora atienden': 'horario', 'hola': 'hola', 'gracias': 'gracias', 'tengo gripe': 'descanso', 'quiero cambiar mi domicilio': 'datos', 'como comparto el kit': 'compartir', 'consultas de compensaciones': 'compensaciones', 'estan atendiendo ahora': 'horario', 'quiero llamar a usil': 'llamar', 'no me jala el correo': 'ti', 'cuando me depositan la plata': 'pago_fecha', 'se me olvido la contra': 'clave', 'a que hora abren': 'horario', 'ya po oe cuando cae mi sueldo': 'pago_fecha', 'holaaa': 'hola', 'mil gracias': 'gracias', 'a quien le pregunto': 'partner', 'me robaron': 'sos', 'estoy mal de la garganta': 'descanso', 'que adjunto en el descanso': 'descanso_docs', 'mi primer ingreso': 'primer_acceso', 'con quien hablo': 'contactos', 'me mude de casa': 'datos', 'registrar contacto de emergencia': 'contacto_emerg' };
     for (const [q, id] of Object.entries(casos)) console.assert(top(q) === id && sc(q) >= T_OK, `"${q}" -> ${top(q)} (${sc(q).toFixed(2)}), esperaba ${id}`);
     const L = (dow, h, m = 0) => ({ dow, h, m });
     console.assert(estadoSede(L(1, 10)).abierto && !estadoSede(L(1, 21)).abierto && !estadoSede(L(0, 12)).abierto && estadoSede(L(6, 16)).abierto && !estadoSede(L(6, 17)).abierto, 'horario');
